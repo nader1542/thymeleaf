@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Autocomplete functionality</title>
+<link
+	href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<!-- Javascript -->
+<script>
+	$(function() {
+		$("#autocomplete-5").autocomplete({
+			source : "employeeList",
+			paramName : "term",
+			minLength : 1
+		});
+	});
+</script>
+<style>
+.ui-autocomplete {
+	max-height: 50px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	/* add padding to account for vertical scrollbar */
+}
+</style>
+</head>
+
+<body>
+	<input id="autocomplete-5">
+</body>
+</html>
